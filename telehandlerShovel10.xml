@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="shovel_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <name>
+        <en>Telehandler Shovel</en>
+        <de>Teleskopladerschaufel</de>
+    </name>
+    <filename>$data/vehicles/telehandlers/lizard/telehandlerShovel.i3d</filename>
+
+    <size width="3" length="2"/>
+
+    <attacherJoint index="0>0" jointType="telehandler" />
+
+    <fillVolumes>
+        <fillVolume index="0>2" allSidePlanes="false" maxAllowedHeapAngle="10"/>
+    </fillVolumes>
+    
+    <fillTypes fruitTypes="wheat rape maize barley chaff potato sugarBeet silage manure woodChips grass grass_windrow wheat_windrow barley_windrow forage"/>
+
+    <fillVolumeDischargeInfo index="0>3" width="1.3" length="0.3" />    
+    <fillVolumeLoadInfo index="0>8" width="1.3" length="0.2" />    
+    <fillVolumeUnloadInfo index="0>9" width="1.3" length="0.2" />  
+    
+    <shovelTipTrigger index="0>7" />
+    
+    <shovel tipReferenceNode="0>5" emptyStartAngle="105" emptyFullAngle="140" />
+
+    <capacity>10000</capacity>
+
+    <shovelEmptyEffect fillTypes="wheat barley maize rape silage grass grass_windrow wheat_windrow barley_windrow forage" rotationNode="0>6" >
+        <effectNode node="0|0|0" linkNode="0>6|0" scale="1.18 1 1" materialType="unloading" materialTypeId="3" position="0 0 0" filename="$data/vehicles/particleAnimations/shared/unloadingBack.i3d" fadeTime="0.5"/>
+        <effectNode node="0|0|1" linkNode="0>6|0" scale="1.18 1 1" materialType="smoke"     materialTypeId="1" position="0 0 0" filename="$data/vehicles/particleAnimations/shared/unloadingBack.i3d" fadeTime="0.5"/>
+    </shovelEmptyEffect>   
+    <emptyParticleSystems>
+        <emptyParticleSystem type="manure" node="0>4" psRootNode="0|4" position="0 0 0" rotation="0 0 0" file="$data/vehicles/particleAnimations/shared/unloadingShovelParticles.i3d" />    
+        <emptyParticleSystem type="potato" node="0>4" psRootNode="0|1" position="0 0 0" rotation="0 0 0" file="$data/vehicles/particleAnimations/shared/unloadingShovelParticles.i3d" />    
+        <emptyParticleSystem type="sugarBeet" node="0>4" psRootNode="0|2" position="0 0 0" rotation="0 0 0" file="$data/vehicles/particleAnimations/shared/unloadingShovelParticles.i3d" />    
+        <emptyParticleSystem type="chaff" node="0>4" psRootNode="0|0" position="0 0 0" rotation="0 0 0" file="$data/vehicles/particleAnimations/shared/unloadingShovelParticles.i3d" />    
+        <emptyParticleSystem type="woodChips" node="0>4" psRootNode="0|3" position="0 0 0" rotation="0 0 0" file="$data/vehicles/particleAnimations/shared/unloadingShovelParticles.i3d" />    
+    </emptyParticleSystems>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+    
+    <components count="1">
+        <component1 centerOfMass="0 0 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

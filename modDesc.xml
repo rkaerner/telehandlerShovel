@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="21">
+    <author>Telehandler Shovel by GIANTS altered by Bauer Hannsen</author>
+    <version>1.0</version>
+    <title>
+        <en>Telehandler Shovel</en>
+        <de>Teleskopladerschaufel</de>
+    </title>
+    <description>
+        <en>Telehandler Shovel modified</en>
+        <de>Teleskopladerschaufel modified</de>
+    </description>
+    <iconFilename>$data/vehicles/store/store_telehandlerShovel.dds</iconFilename>
+    <multiplayer supported="true"/>
+ 
+    <storeItems>
+        <storeItem>
+			<name>Telehandler Shovel 10</name>
+			<specs>
+				<fillTypes>wheat rape maize barley chaff potato sugarBeet silage woodChips grass straw forage manure</fillTypes>
+				<capacity unit="$l10n_unit_liter">10000</capacity>
+			</specs>
+			<functions>
+				<function><![CDATA[Mit Teleladern können verschiedenste Dinge gestapelt und verladen werden.]]></function>
+			</functions>
+
+			<rotation>0</rotation>
+            <image active="$data/vehicles/store/store_telehandlerShovel.dds" brand="$data/vehicles/store/brand_lizard.dds"/>
+            <price>1800</price>
+            <xmlFilename>telehandlerShovel10.xml</xmlFilename>
+            <dailyUpkeep>20</dailyUpkeep>
+			<category>teleLoaders</category>
+			<brand>$l10n_shopItemBrand_lizard</brand>
+        </storeItem>
+ 		
+    </storeItems>    
+</modDesc>
